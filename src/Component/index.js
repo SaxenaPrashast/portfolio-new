@@ -1,0 +1,9 @@
+export { default as BlogPosts } from './BlogPosts';
+export { default as Contacts } from './Contacts';
+export { default as Footer } from './Footer';
+export { default as Header } from './Header';
+export { default as Profile } from './Profile';
+export { default as Projects } from './Projects';
+export { default as Achievements } from './Achievements';
+export { default as Education } from './Education';
+export { default as AllProjects } from './AllProjects';
