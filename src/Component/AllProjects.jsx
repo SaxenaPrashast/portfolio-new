@@ -6,6 +6,12 @@ const AllProjects = () => (
     <h2 className="text-2xl md:text-3xl font-bold mb-6">Projects</h2>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <ProjectCard
+        title="Rest API for video streaming application"
+        description="A RESTful API for a video streaming application built with Node.js and Express."
+        icon="💾"
+        link="https://github.com/SaxenaPrashast/videotube"
+      />
+      <ProjectCard
         title="Word Lookup Dictionary"
         description="Implemented a fast English dictionary using Trie structures and file handling for word management in C++."
         icon="🔔"
