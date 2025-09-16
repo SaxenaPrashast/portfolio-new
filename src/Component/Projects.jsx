@@ -36,25 +36,19 @@ const Projects = () => (
 );
 
 function ProjectCard({ title, description, icon, link }) {
+  const handleClick = () => {
+    window.open(link, "_blank");
+  };
+
   return (
-    <div className="w-full bg-[#221E2A]/50 backdrop-blur-md rounded-xl p-6 shadow-md border border-transparent hover:border-purple-400 hover:shadow-purple-300/30 transition-all duration-300 ease-in-out" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', backdropFilter: 'blur(10px)' }}>
+    <div onClick={handleClick} className="w-full bg-[#221E2A]/50 backdrop-blur-md rounded-xl p-6 shadow-md border border-transparent hover:cursor-pointer hover:shadow-purple-300/30 transition-all duration-300 ease-in-out" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', backdropFilter: 'blur(10px)' }}>
       <div className="flex items-center space-x-4 mb-2">
         <div className="w-8 h-8 rounded-full bg-gray-600 flex items-center justify-center">
           <span role="img" aria-label={`${title} icon`}>{icon}</span>
         </div>
         <h3 className="text-xl font-semibold">{title}</h3>
       </div>
-      <p className="text-sm text-gray-400">{description}</p>
-      {link && (
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="absolute -top-2 -right-2 hidden rounded-full border-[1px] border-accent bg-accent p-1.5 text-tertiary opacity-0 transition hover:bg-secondary hover:text-accent group-hover:block group-hover:opacity-100"
-        >
-          🔗
-        </a>
-      )}
+      <p className="text-sm text-gray-400 hover:cursor-pointer">{description}</p>
     </div>
   );
 }
