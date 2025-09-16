@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import AchievementCard from "./AchievementCard";
-import CertificateModal from "./CertificateModal";
 
 const achievementsData = [
   {
@@ -16,12 +15,6 @@ const achievementsData = [
     username: "saxenaprashast2003",
     description: "Achieved Pupil rank in competitive programming contests.",
   },
-  // {
-  //   type: "codingPlatform",
-  //   platform: "CodeChef",
-  //   username: "saxenaprashast",
-  //   description: "Rated as a 2-star coder on the platform.",
-  // },
   {
     type: "codingPlatform",
     platform: "gfg",
@@ -33,45 +26,36 @@ const achievementsData = [
     title: "Kode Komat 3.0",
     description:
       "Runner-up in a competitive programming event organized by KTS.",
-    imageUrl: "/certificates/kode-komat-cert.png",
+    imageUrl: "",
   },
   {
     type: "certificate",
     title: "MetaMint Hackathon",
     description:
       "Secured a Top 5 position by building MetaMint, a Web3-based NFT minting platform.",
-    imageUrl: "/certificates/metamint-hackathon-cert.png",
+    imageUrl: "",
+  },
+  {
+    type: "certificate",
+    title: "AWS Certified Cloud Practitioner CLF-C02",
+    description: "Achieved AWS Certified Cloud Practitioner status.",
+    imageUrl:
+      "https://drive.google.com/file/d/1LlJGtE6XC8YWG2_k-MLkCQHQRBSIN-XC/view?usp=drive_link",
   },
 ];
 
 const Achievements = () => {
-  const [modalImage, setModalImage] = useState(null);
-
-  const openModal = (imageUrl) => setModalImage(imageUrl);
-  const closeModal = () => setModalImage(null);
-
   return (
     <section className="py-12">
       {/* Section Title */}
-      <h2 className="text-2xl md:text-3xl font-bold mb-6">
-        Achievements
-      </h2>
+      <h2 className="text-2xl md:text-3xl font-bold mb-6">Achievements</h2>
 
       {/* Achievements Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {achievementsData.map((achievement, index) => (
-          <AchievementCard
-            key={index}
-            achievement={achievement}
-            onViewCertificate={openModal}
-          />
+          <AchievementCard key={index} achievement={achievement} />
         ))}
       </div>
-
-      {/* Certificate Modal */}
-      {modalImage && (
-        <CertificateModal imageUrl={modalImage} onClose={closeModal} />
-      )}
     </section>
   );
 };

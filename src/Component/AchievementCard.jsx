@@ -114,7 +114,7 @@ const AchievementCard = ({ achievement, onViewCertificate }) => {
           <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
           <p className="text-gray-300 text-sm leading-relaxed mb-4">{description}</p>
           <button
-            onClick={() => onViewCertificate(imageUrl)}
+            onClick={() => window.open(imageUrl, "_blank")}
             className="mt-3 px-5 py-2 rounded-lg border border-purple-400 text-purple-400 font-semibold hover:bg-purple-400 hover:text-[#11111b] transition-all duration-300"
           >
             View Certificate
@@ -125,7 +125,7 @@ const AchievementCard = ({ achievement, onViewCertificate }) => {
   };
 
   return (
-    <div className="w-full bg-[#221E2A]/50 backdrop-blur-md rounded-xl p-6 shadow-md border border-transparent hover:border-purple-400 hover:shadow-purple-300/30 transition-all duration-300 ease-in-out">
+    <div className="w-full bg-[#221E2A]/50 backdrop-blur-md rounded-xl p-6 shadow-2xl border border-transparent  hover:shadow-purple-300/30 transition-all duration-300 ease-in-out">
       {renderContent()}
     </div>
   );

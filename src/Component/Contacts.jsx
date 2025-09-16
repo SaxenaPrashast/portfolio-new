@@ -4,9 +4,7 @@ function Contacts() {
   return (
     <section
       id="contact"
-      className="w-full mb-16 p-6 md:p-10 backdrop-blur-md rounded-xl shadow-md border border-transparent 
-                 hover:border-purple-400 hover:shadow-purple-300/30 
-                 transition-all duration-300 ease-in-out"
+      className="w-full mb-16 p-6 md:p-10 backdrop-blur-md rounded-xl shadow-xl border border-transparent hover:shadow-purple-300/30 transition-all duration-300 ease-in-out"
       style={{
         backgroundColor: 'rgba(255, 255, 255, 0.05)',
         backdropFilter: 'blur(10px)',
