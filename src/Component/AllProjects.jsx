@@ -29,6 +29,12 @@ const AllProjects = () => (
         icon="💾"
         link="https://github.com/SaxenaPrashast/Hideout-fullstack"
       />
+      <ProjectCard
+      title="Quiz App"
+      description="A dynamic quiz application with a timer, score tracking, and a user-friendly interface.Built using React.js"
+      icon="❓"
+      link="https://quiz-app-prashast.vercel.app/"
+       />
     </div>
   </section>
 );
